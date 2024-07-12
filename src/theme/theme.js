@@ -1,22 +1,63 @@
-// theme.js
 import { extendTheme } from '@chakra-ui/react';
 
-const customTheme = extendTheme({
-  colors: {
-    brand: {
-      50: '#e0f2ff',
-      100: '#b3d9ff',
-      200: '#80bfff',
-      300: '#4da6ff',
-      400: '#1a8cff',
-      500: '#0073e6',
-      600: '#0059b3',
-      700: '#003d80',
-      800: '#00264d',
-      900: '#00131a',
+// Extend the theme
+const theme = extendTheme({
+  semanticTokens: {
+    colors: {
+      "chakra-body-text": {
+        _light: "#202023",
+        _dark: "white",
+      },
+      "chakra-body-bg": {
+        _light: "white",
+        _dark: "#202023",
+      },
     },
-    // Các màu khác nếu cần
+  },
+  fonts: {
+    heading: "'Fira Sans', sans-serif",
+    textName: "'Signika', sans-serif",
+  },
+  fontSizes: {
+    xs: '12px',
+    sm: '14px',
+    md: '16px',
+    lg: '18px',
+    xl: '20px',
+    '2xl': '24px',
+    '3xl': '30px',
+    '4xl': '36px',
+    '5xl': '48px',
+    '6xl': '64px',
+  },
+  components: {
+    Button: {},
+    Heading: {
+      baseStyle: {
+        textDecoration: 'underline',
+        textDecorationColor: 'gray',
+        textUnderlineOffset: '4px',
+        fontSize: '3xl',
+      },
+      sizes: {
+        sm: {
+          fontSize: 'md',
+        },
+        md: {
+          fontSize: 'lg',
+        },
+        lg: {
+          fontSize: 'xl',
+        },
+        xl: {
+          fontSize: '2xl',
+        },
+      },
+      defaultProps: {
+        size: 'lg',
+      },
+    },
   },
 });
 
-export default customTheme;
+export default theme;
