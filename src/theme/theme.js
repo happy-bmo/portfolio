@@ -38,6 +38,7 @@ const theme = extendTheme({
         textDecorationColor: 'gray',
         textUnderlineOffset: '4px',
         fontSize: '3xl',
+        margin: '16px 0'
       },
       sizes: {
         sm: {

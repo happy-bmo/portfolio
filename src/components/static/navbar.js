@@ -28,13 +28,13 @@ const Header = () => {
           </Box>
           <Flex display={{ base: 'none', md: 'flex' }} alignItems="center">
             <Stack direction="row" spacing={7}>
-              <Link href="#home" style={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }}>
+              <Link href="#home" sx={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }}>
                 About me
               </Link>
-              <Link href="#contact" style={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }}>
+              <Link href="#contact" sx={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }}>
                 Projects
               </Link>
-              <Link href="https://github.com/happy-bmo" style={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }} isExternal>
+              <Link href="https://github.com/happy-bmo" sx={{fontSize: "18px"}} px={2} py={1} _hover={{ textDecoration: "underline" }} isExternal>
                 Github
               </Link>
             </Stack>

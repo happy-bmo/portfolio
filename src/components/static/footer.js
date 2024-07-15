@@ -1,8 +1,12 @@
 import React from 'react'
-
+import { Text, Flex } from '@chakra-ui/react'
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Flex justifyContent="center" py={5}>
+      <Text sx={{ color: "#CCC", fontSize: "14px" }}>
+      &#169; Minh Duy 2024
+      </Text>
+    </Flex>
   )
 }
 
