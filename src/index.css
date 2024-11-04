@@ -2,29 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+:root {
   margin: 0;
+  padding: 0;
+  box-sizing: bor;
+  font-family: "OpenSans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Inconsolata','Signika'
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-  font-family: "Inconsolata";
-  src: url('./assets/fonts/Inconsolata_Condensed-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+/* Scrollbar */
+html ::-webkit-scrollbar {
+  border-radius: 0px;
+  width: 8px;
+}
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.06);
+}
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.06);
+}
+html ::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 @font-face {
-  font-family: "Signika";
-  src: url('./assets/fonts/SignikaNegative-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "OpenSans";
+  src: url('./assets/fonts/OpenSans-Light.ttf') format('truetype');
+  font-weight: 300;
 }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url('./assets/fonts/OpenSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Flex justifyContent="center" py={5}>
       <Text sx={{ color: "#CCC", fontSize: "14px" }}>
-      &#169; Minh Duy 2024
+      &#169; Copyright Zeus 2024
       </Text>
     </Flex>
   )

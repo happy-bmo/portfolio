@@ -1,16 +1,40 @@
-import { Box } from '@chakra-ui/react';
 import './App.css';
-import Navbar from './components/static/navbar';
-import Content from './components/main/contents';
-import Footer from './components/static/footer';
-function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { publicRoutes } from '~/routes'
+import DefaultLayout from '~/layouts/DefaultLayout';
+import { Fragment } from 'react';
+function App() {
   return (
-    <Box as="main">
-      <Navbar/>
-      <Content/>
-      <Footer/>
-    </Box>
+      <Router>
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            let Layout = DefaultLayout
+
+            if(route.layout) {
+              Layout = route.layout
+            }
+            else if (route.layout === null) {
+              Layout = Fragment
+            }
+
+            const Page = route.component
+
+            return (
+              <Route 
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page/>
+                  </Layout>
+                }
+              />
+
+            )
+          })}
+        </Routes>
+      </Router>
   );
 }
 

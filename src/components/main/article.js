@@ -84,7 +84,6 @@ function Article() {
         </Box>
       </Box>
     </Box>
-    
   )
 }
 

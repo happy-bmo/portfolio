@@ -10,13 +10,13 @@ const theme = extendTheme({
       },
       "chakra-body-bg": {
         _light: "white",
-        _dark: "#202023",
+        _dark: "#2d2d30",
       },
     },
   },
   fonts: {
-    heading: "'Fira Sans', sans-serif",
-    textName: "'Signika', sans-serif",
+    heading: "'OpenSans', sans-serif",
+    textName: "'OpenSans', sans-serif",
   },
   fontSizes: {
     xs: '12px',
@@ -32,13 +32,33 @@ const theme = extendTheme({
   },
   components: {
     Button: {},
+    Text: {
+      baseStyle: {
+        fontSize: 'md',
+        fontWeight: '300'
+      },
+      sizes: {
+        sm: {
+          fontSize: 'md',
+        },
+        md: {
+          fontSize: 'lg',
+        },
+        lg: {
+          fontSize: 'xl',
+        },
+        xl: {
+          fontSize: '2xl',
+        },
+      },
+      defaultProps: {
+        size: 'lg',
+      },
+    },
     Heading: {
       baseStyle: {
-        textDecoration: 'underline',
-        textDecorationColor: 'gray',
-        textUnderlineOffset: '4px',
-        fontSize: '3xl',
-        margin: '16px 0'
+        fontSize: 'xl',
+        fontWeight: '500'
       },
       sizes: {
         sm: {
