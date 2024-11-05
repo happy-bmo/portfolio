@@ -1,25 +1,17 @@
-import { Card, Flex, Avatar, Text } from '@chakra-ui/react'
-import React from 'react'
-
+import { Flex, Avatar, Text } from '@chakra-ui/react';
+import React from 'react';
 
 function Sidebar() {
     return (
-        <Card 
-            sx={{
-                backgroundColor: 'rgba(255, 255, 255, 0.1)', /* Màu nền trắng với độ trong suốt */
-                border: 'none',
-                backdropFilter: 'blur(20px)', /* Làm mờ các phần tử phía sau */
-                borderRadius: '15px', /* Bo tròn các góc */
-                padding: '20px', /* Thêm khoảng cách bên trong */
-                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)' /* Tạo bóng cho phần tử */}}
-        >
-            <Flex direction="column" alignItems="center">
+        <Flex direction="column" alignItems="center">
             <Avatar
-                src="https://cellphones.com.vn/sforum/wp-content/uploads/2023/08/hinh-nen-meo-5.jpg"
+                src="https://res.cloudinary.com/dv46hy594/image/upload/v1730778905/myAvatar_acv60l.png"
                 size="xl"
                 width="100px"
                 height="100px"
-                border="solid 1px #CCC"
+                border="solid 3px #CCC"
+                objectFit="cover"
+                boxShadow="rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
             />
             <Flex className="introduce flex justify-center i" alignItems="center" flexDirection="column">
                 <Text fontFamily="textName" fontSize="3xl" my={2}>
@@ -28,7 +20,6 @@ function Sidebar() {
                 <Text>Its Duy</Text>
             </Flex>
         </Flex>
-        </Card>
     );
 }
 
