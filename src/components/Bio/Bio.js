@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 function Bio() {
     const textHightlight = {
@@ -6,7 +6,7 @@ function Bio() {
     }
 
     return (
-        <>
+        <Box>
             <Text>
                 <Text as="span" mr={4} sx={textHightlight}>2003</Text>
                 Born in Ho Chi Minh City, Viet Nam
@@ -23,7 +23,7 @@ function Bio() {
                 </Text>
                 Working at KIDO group as full-stack developer
             </Text>
-        </>
+        </Box>
     );
 }
 

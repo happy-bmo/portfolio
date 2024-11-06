@@ -7,6 +7,7 @@ import Bio from '~/components/Bio';
 import Contact from '~/components/Contact';
 import Sidebar from '~/components/Sidebar';
 import Widget from '~/components/Widget';
+import Tech from '~/components/Tech';
 
 // import Article from '~/components/main/article'
 const Home = () => {
@@ -42,40 +43,40 @@ const Home = () => {
         <Grid templateColumns="repeat(4, 1fr)" gap={4} position="relative">
             {/* SIDEBAR */}
             <GridItem
-                data-aos={isMobile ? 'fade-up' : 'fade-right'}
-                colSpan={{ base: 4, md: 1 }}
-                rowSpan={{ base: 1, md: 1 }}
+                data-aos="fade-down"
+                data-aos-anchor-placement="top-center"
+                colSpan={4}
+                rowSpan={1}
             >
                 <Widget>
                     <Sidebar />
                 </Widget>
             </GridItem>
+            {/* TECHS */}
+            <GridItem data-aos={isMobile ? 'fade-up' : 'fade-right'} colSpan={{ base: 4, md: 1 }} rowSpan={1}>
+                <Widget heading="Tech 💻">
+                    <Tech />
+                </Widget>
+            </GridItem>
+            {/* BIO */}
+            <GridItem data-aos={isMobile ? 'fade-up' : 'fade-left'} colSpan={{ base: 4, md: 3 }} rowSpan={1}>
+                <Widget heading="Bio 🧍‍♂️">
+                    <Bio />
+                </Widget>
+            </GridItem>
             {/* Journey */}
-            <GridItem
-                data-aos={isMobile ? 'fade-up' : 'fade-left'}
-                colSpan={{ base: 4, md: 3 }}
-                rowSpan={{ base: 1, md: 1 }}
-            >
+            <GridItem data-aos={isMobile ? 'fade-up' : 'fade-right'} colSpan={{ base: 4, md: 2 }} rowSpan={1}>
                 <Widget className="journey" heading={myJourney.heading}>
                     <Text>{myJourney.content}</Text>
                 </Widget>
             </GridItem>
-            {/* BIO */}
-            <GridItem
-                data-aos={isMobile ? 'fade-up' : 'fade-right'}
-                colSpan={{ base: 4, md: 2 }}
-                rowSpan={{ base: 1, md: 1 }}
-            >
-                <Widget heading="Bio">
-                    <Bio />
+            <GridItem data-aos="fade-up" colSpan={{ base: 4, md: 1 }} rowSpan={1}>
+                <Widget heading="I ❤️">
+                    <Text>Games, car, travel, technologies, hangout</Text>
                 </Widget>
             </GridItem>
-            <GridItem
-                data-aos={isMobile ? 'fade-up' : 'fade-left'}
-                colSpan={{ base: 4, md: 2 }}
-                rowSpan={{ base: 1, md: 1 }}
-            >
-                <Widget heading="Contact me">
+            <GridItem data-aos={isMobile ? 'fade-up' : 'fade-left'} colSpan={{ base: 4, md: 1 }} rowSpan={1}>
+                <Widget heading="Contact me 🔭">
                     <Contact />
                 </Widget>
             </GridItem>

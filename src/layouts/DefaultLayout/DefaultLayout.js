@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import { Box, Button, Container } from '@chakra-ui/react';
+import { ArrowUpIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
+
 import Header from '~/layouts/components/Header';
 import Footer from '~/layouts/components/Footer';
-import { useEffect, useState } from 'react';
-import { ChevronUpIcon } from '@chakra-ui/icons';
 
 function DefaultLayout({ children }) {
     const [showOnTop, setShowOnTop] = useState(false);
@@ -28,24 +29,14 @@ function DefaultLayout({ children }) {
     };
 
     return (
-        <Box className="wrapper">
+        <Box as="main">
             <Header />
-            <Box className="content">
-                <Container maxW="100%" mx="auto" pt="60px">
-                    {children}
-                </Container>
-            </Box>
-
+            <Container maxW="80%" mx="auto" pt="70px">
+                {children}
+            </Container>
             {showOnTop && (
-                <Button
-                    variant="outline"
-                    border="solid 1px #ccc"
-                    onClick={BackToTop}
-                    position="fixed"
-                    bottom="10px"
-                    right="20px"
-                >
-                    <ChevronUpIcon />
+                <Button variant="outline" onClick={BackToTop} position="fixed" bottom="5px" right="5px">
+                    <ArrowUpIcon />
                 </Button>
             )}
             <Footer />
